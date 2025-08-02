@@ -15,7 +15,7 @@ export default function Rates() {
   return (
     <section id="rates" className="py-20 bg-white dark:bg-gray-950">
       <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-700 dark:text-yellow-400 mb-12">Paper & Printing Rates</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-teal-600 dark:text-teal-400 mb-12">Paper & Printing Rates</h2>
         <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} viewport={{ once: true }}>
           <div className="overflow-x-auto">
             <table className="min-w-full bg-white dark:bg-gray-900 rounded-xl shadow-lg">

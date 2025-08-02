@@ -9,9 +9,9 @@ import WhyUs from './components/WhyUs';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import SectionConnector from './components/SectionConnector';
 import Lenis from 'lenis';
 import './index.css';
+import SectionConnector from './components/SectionConnector';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -33,21 +33,21 @@ function App() {
   return (
     <div className={(darkMode ? 'dark bg-gray-950' : 'bg-white') + ' overflow-x-hidden'}>
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-      <main className="pt-20">
+      <main className="md:pt-20 pt-20">
         <Hero />
-        <SectionConnector />
+        <SectionConnector variant="curve" />
         <DesigningServices />
-        <SectionConnector />
+        <SectionConnector variant="zigzag" />
         <PrintingServices />
-        <SectionConnector />
-        <Rates />
-        <SectionConnector />
+        <SectionConnector variant="wave" />
+        {/* <Rates /> */}
+        {/* <SectionConnector variant="curve" /> */}
         <Portfolio />
-        <SectionConnector />
+        <SectionConnector variant="zigzag" />
         <WhyUs />
-        <SectionConnector />
+        <SectionConnector variant="wave" />
         <Testimonials />
-        <SectionConnector />
+        <SectionConnector variant="curve" />
         <Contact />
       </main>
       <Footer />

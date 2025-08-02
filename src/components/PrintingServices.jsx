@@ -13,9 +13,9 @@ const services = [
 
 export default function PrintingServices() {
   return (
-    <section id="printing" className="py-20 bg-blue-50 dark:bg-gray-900">
+    <section id="printing" className="py-20 bg-gradient-to-br from-purple-50 via-white to-teal-50 dark:from-purple-900/30 dark:via-gray-800 dark:to-purple-900/30">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-700 dark:text-yellow-400 mb-12">Printing Services</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-purple-600 dark:text-teal-400 mb-12 drop-shadow-lg">Printing Services</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {services.map((service, i) => (
             <motion.div
@@ -23,12 +23,15 @@ export default function PrintingServices() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden hover:scale-105 transition-transform group"
+              viewport={{ once: false, amount: 0.2 }}
+              className="bg-white/90 dark:bg-gray-800/80 rounded-xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden hover:scale-105 hover:shadow-2xl hover:border-purple-300 dark:hover:border-teal-400 transition-all duration-300 backdrop-blur-sm group"
             >
-              <img src={service.img} alt={service.title} className="w-full h-40 object-cover group-hover:scale-110 transition-transform duration-300" />
+              <div className="relative overflow-hidden">
+                <img src={service.img} alt={service.title} className="w-full h-40 object-cover group-hover:scale-110 transition-transform duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
               <div className="p-4">
-                <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">{service.title}</h3>
+                <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 group-hover:text-purple-600 dark:group-hover:text-teal-400 transition-colors duration-200">{service.title}</h3>
               </div>
             </motion.div>
           ))}
