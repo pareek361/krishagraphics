@@ -14,7 +14,7 @@ import './index.css';
 import SectionConnector from './components/SectionConnector';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', darkMode);
