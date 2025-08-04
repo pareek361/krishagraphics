@@ -33,9 +33,14 @@ export default function Hero() {
     >
       {/* Background with Gradient Overlay */}
       <img
-        src="/placeholder.svg?height=600&width=1200"
+        src="/heroimage.jpeg"
         alt="Printing Press"
-        className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none"
+        className="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none hidden md:block"
+      />
+      <img
+        src="/heromob.jpg"
+        alt="Printing Press Mobile"
+        className="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none md:hidden"
       />
       <div className="absolute top-20 left-10 w-72 h-72 bg-teal-200/30 dark:bg-teal-800/20 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-200/30 dark:bg-purple-800/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
